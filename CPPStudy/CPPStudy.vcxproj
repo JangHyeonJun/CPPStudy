@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClCompile Include="constantPointer.cpp" />
     <ClCompile Include="CPPStudy.cpp" />
+    <ClCompile Include="dynamicAlloc.cpp" />
     <ClCompile Include="pointer.cpp" />
     <ClCompile Include="reference.cpp" />
   </ItemGroup>
