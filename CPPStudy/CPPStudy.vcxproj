@@ -152,10 +152,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="constantPointer.cpp" />
+    <ClCompile Include="copyConstructor.cpp" />
     <ClCompile Include="CPPStudy.cpp" />
+    <ClCompile Include="destructor.cpp" />
     <ClCompile Include="dynamicAlloc.cpp" />
     <ClCompile Include="pointer.cpp" />
     <ClCompile Include="reference.cpp" />
+    <ClCompile Include="Starcraft.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
