@@ -159,6 +159,7 @@
     <ClCompile Include="pointer.cpp" />
     <ClCompile Include="reference.cpp" />
     <ClCompile Include="Starcraft.cpp" />
+    <ClCompile Include="string.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
