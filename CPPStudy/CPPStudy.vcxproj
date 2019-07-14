@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="complexNumber.cpp" />
     <ClCompile Include="constantPointer.cpp" />
     <ClCompile Include="copyConstructor.cpp" />
     <ClCompile Include="CPPStudy.cpp" />
