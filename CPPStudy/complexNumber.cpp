@@ -19,7 +19,12 @@
 //
 //	void println() { std::cout << "( " << real << " , " << img << " ) " << std::endl; }
 //};
-//
+////Complex 객체를 매개변수와 반환 타입으로 갖는 전역 함수
+////Complex operator+(const Complex& a, const Complex& b)
+////{
+////	Complex temp(a);
+////	return temp + b;
+////}
 //Complex Complex::operator+(const Complex& c)
 //{
 //	Complex temp(real + c.real, img + c.img);
@@ -79,6 +84,9 @@
 //
 //	c.println();
 //	d.println();
+//
+//	Complex x(0, 0);
+//
 //
 //	return 0;
 //}
