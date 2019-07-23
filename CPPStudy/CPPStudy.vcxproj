@@ -158,6 +158,7 @@
     <ClCompile Include="destructor.cpp" />
     <ClCompile Include="dynamicAlloc.cpp" />
     <ClCompile Include="inheritance.cpp" />
+    <ClCompile Include="inheritance_easy.cpp" />
     <ClCompile Include="operatorOverloading.cpp" />
     <ClCompile Include="pointer.cpp" />
     <ClCompile Include="reference.cpp" />
