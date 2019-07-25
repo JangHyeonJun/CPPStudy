@@ -66,5 +66,8 @@
     <ClCompile Include="inheritance4.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="iostream.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
