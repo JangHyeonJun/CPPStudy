@@ -69,5 +69,14 @@
     <ClCompile Include="iostream.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ifstream.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ofstream.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="sstream.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
