@@ -3,6 +3,10 @@
 using std::string;
 
 namespace MyExcel {
+	class Cell;
+	class Table;
+	
+
 	class Vector {
 		string* data;
 		int capacity;
@@ -98,12 +102,28 @@ namespace MyExcel {
 		~Table();
 
 		void reg_cell(Cell* c, int row, int col);
-		int to_numeric(const string* s);
+		int to_numeric(const string& s);
 		int to_numeric(int row, int col);
 
 		string stringify(const string& s);
 		string stringify(int row, int col);
 
 		virtual string print_table() = 0;
+	};
+	std::ostream& operator<<(std::ostream& o, Table& table)
+	{
+		o << table.print_table();
+		return o;
+	}
+	class TxtTable : public Table
+	{
+		string repeat_char(int n, char c);
+
+		string col_num_to_str(int n);
+
+	public:
+		TxtTable(int row, int col);
+
+		string print_table();
 	};
 }

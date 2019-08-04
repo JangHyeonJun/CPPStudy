@@ -99,7 +99,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
@@ -157,6 +157,7 @@
     <ClCompile Include="CPPStudy.cpp" />
     <ClCompile Include="destructor.cpp" />
     <ClCompile Include="dynamicAlloc.cpp" />
+    <ClCompile Include="Excel.cpp" />
     <ClCompile Include="ifstream.cpp" />
     <ClCompile Include="inheritance.cpp" />
     <ClCompile Include="inheritance2.cpp" />
