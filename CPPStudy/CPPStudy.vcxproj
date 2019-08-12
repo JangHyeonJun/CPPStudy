@@ -176,6 +176,7 @@
     <ClCompile Include="string.cpp" />
     <ClCompile Include="template.cpp" />
     <ClCompile Include="utils.cpp" />
+    <ClCompile Include="variadicTemplate.cpp" />
     <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
