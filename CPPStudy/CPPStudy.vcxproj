@@ -173,6 +173,11 @@
     <ClCompile Include="sstream.cpp" />
     <ClCompile Include="Stack.cpp" />
     <ClCompile Include="Starcraft.cpp" />
+    <ClCompile Include="stlDeque.cpp" />
+    <ClCompile Include="stlList.cpp" />
+    <ClCompile Include="stlMap.cpp" />
+    <ClCompile Include="stlSet.cpp" />
+    <ClCompile Include="stlVector.cpp" />
     <ClCompile Include="string.cpp" />
     <ClCompile Include="template.cpp" />
     <ClCompile Include="utils.cpp" />
