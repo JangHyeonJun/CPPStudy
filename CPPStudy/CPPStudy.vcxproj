@@ -158,6 +158,7 @@
     <ClCompile Include="destructor.cpp" />
     <ClCompile Include="dynamicAlloc.cpp" />
     <ClCompile Include="Excel.cpp" />
+    <ClCompile Include="findFunction.cpp" />
     <ClCompile Include="ifstream.cpp" />
     <ClCompile Include="inheritance.cpp" />
     <ClCompile Include="inheritance2.cpp" />
@@ -166,10 +167,12 @@
     <ClCompile Include="inheritance_easy.cpp" />
     <ClCompile Include="inheritance_normal.cpp" />
     <ClCompile Include="iostream.cpp" />
+    <ClCompile Include="lambdaFunction.cpp" />
     <ClCompile Include="ofstream.cpp" />
     <ClCompile Include="operatorOverloading.cpp" />
     <ClCompile Include="pointer.cpp" />
     <ClCompile Include="reference.cpp" />
+    <ClCompile Include="sortAlgorithm.cpp" />
     <ClCompile Include="sstream.cpp" />
     <ClCompile Include="Stack.cpp" />
     <ClCompile Include="Starcraft.cpp" />
