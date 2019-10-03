@@ -59,6 +59,7 @@
 //			else
 //				prev->next = node->next;
 //			delete node;
+//			size--;
 //			return true;
 //		}
 //		node = node->next;
