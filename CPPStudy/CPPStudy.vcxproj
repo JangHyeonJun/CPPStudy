@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="complexNumber.cpp" />
+    <ClCompile Include="condition_variable.cpp" />
     <ClCompile Include="constantPointer.cpp" />
     <ClCompile Include="copyConstructor.cpp" />
     <ClCompile Include="CPPStudy.cpp" />
@@ -172,6 +173,7 @@
     <ClCompile Include="ofstream.cpp" />
     <ClCompile Include="operatorOverloading.cpp" />
     <ClCompile Include="pointer.cpp" />
+    <ClCompile Include="producer_consumer.cpp" />
     <ClCompile Include="quickSort.cpp" />
     <ClCompile Include="reference.cpp" />
     <ClCompile Include="smart_pointer_shared.cpp" />
@@ -189,6 +191,7 @@
     <ClCompile Include="stlVector.cpp" />
     <ClCompile Include="string.cpp" />
     <ClCompile Include="template.cpp" />
+    <ClCompile Include="TextGame.cpp" />
     <ClCompile Include="thread_2.cpp" />
     <ClCompile Include="thread_1.cpp" />
     <ClCompile Include="race_condition.cpp" />
@@ -197,6 +200,7 @@
     <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ObjectPool.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
