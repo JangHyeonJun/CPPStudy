@@ -6,9 +6,9 @@
 #include <mutex>
 #include "SpawningSimulator.h"
 
-const int MONSTER_NUM = 100;
-const int TIME_SCALE = 10;
-const double RUNNING_TIME = 50.f;
+const int MONSTER_NUM = 100; // 생성 & 삭제 할 몬스터의 갯수
+const int TIME_SCALE = 10; // 시간 배속
+const double RUNNING_TIME = 50.f; // 시뮬레이션을 몇 초 동안 진행할지
 
 ObjectPool<Monster> monster_pool(MONSTER_NUM);
 std::list<Monster*> monster_list;
@@ -60,7 +60,6 @@ void Simulate()
 	auto prev_time = std::chrono::system_clock::now();
 	std::chrono::duration<double> timer = std::chrono::duration<double>::zero();
 	std::mutex m;
-	Init();
 	while (timer.count() < RUNNING_TIME)
 	{
 		auto curr_time = std::chrono::system_clock::now();
@@ -84,6 +83,7 @@ int main()
 {
 	std::cout << "객체 생성 / 소멸 시뮬레이션을 시작합니다." << std::endl;
 
+	Init();
 	Simulate();
 
 	return 0;
