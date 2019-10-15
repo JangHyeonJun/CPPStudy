@@ -93,7 +93,7 @@
 
     **GetObject** 함수는 풀에서 객체(의 포인터)를 가져오는 함수입니다. 만약 `pool` 에 저장해놓은 객체가 없다면 `max_size` 만큼 객체를 추가하고 `max_size` 를 2배로 늘립니다.
 
-    **ReturnObject** 함수는 사용한 객체를 풀에 반환하는 함수, **IsEmpty** 함수는 풀에 비어있는지 알려주는 함수, **GetMaxSize** 함수는 풀의 `max_size` 를 반환하는 함수입니다.  
+    **ReturnObject** 함수는 사용한 객체를 풀에 반환하는 함수, **IsEmpty** 함수는 풀에 비어있는지 알려주는 함수, **GetMaxSize** 함수는 풀의 `max_size` 를 반환하는 함수입니다. 
 
   ```c++
 T* GetObject() {
