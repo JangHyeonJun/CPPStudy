@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 #include <stack>
 #include <random>
 
@@ -12,7 +13,7 @@ class ObjectPool
 	std::stack<T*> pool;
 	int max_size;
 public:
-	ObjectPool(int size = 1000) {
+	ObjectPool(const int& size = 100) {
 		max_size = size;
 		for (int i = 0; i < max_size; i++)
 		{
@@ -45,6 +46,12 @@ public:
 	void ReturnObject(T* object) {
 		pool.push(object);
 	}
+	bool IsEmpty() {
+		return pool.empty();
+	}
+	int GetMaxSize() {
+		return max_size;
+	}
 };
 
 class Monster
@@ -54,7 +61,7 @@ class Monster
 	int x, y;
 public:
 	Monster() : name("Monster") {};
-	Monster(int index) : name("Monster " + std::to_string(index)) {}
+	Monster(const int& index) : name("Monster " + std::to_string(index)) {}
 	~Monster() {};
 
 	void Init() {

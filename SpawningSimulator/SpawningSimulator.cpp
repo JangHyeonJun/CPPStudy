@@ -1,13 +1,12 @@
 ﻿#include <iostream>
-#include <string>
 #include <list>
 #include <chrono>
 #include <thread>
 #include <mutex>
 #include "SpawningSimulator.h"
 
-const int MONSTER_NUM = 100; // 생성 & 삭제 할 몬스터의 갯수
-const int TIME_SCALE = 10; // 시간 배속
+const int MONSTER_NUM = 100; // 처음 생성 & 삭제 할 몬스터의 갯수
+const int TIME_SCALE = 10; // 시뮬레이션 시간 배속
 const double RUNNING_TIME = 50.f; // 시뮬레이션을 몇 초 동안 진행할지
 
 ObjectPool<Monster> monster_pool(MONSTER_NUM);
@@ -25,7 +24,7 @@ void Init()
 
 void GenerateMonster(std::mutex& m)
 {
-	while (monster_list.size() < MONSTER_NUM)
+	while (!monster_pool.IsEmpty())
 	{
 		std::lock_guard<std::mutex> lock(m);
 		Monster* monster = monster_pool.GetObject();
@@ -69,7 +68,7 @@ void Simulate()
 
 		std::thread t1, t2;
 		t1 = std::thread(Update, elapsed_time.count(), std::ref(m));
-		if (monster_list.size() < MONSTER_NUM / 2)
+		if (monster_list.size() < monster_pool.GetMaxSize() / 2)
 			t2 = std::thread(GenerateMonster, std::ref(m));
 
 		t1.join();
