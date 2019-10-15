@@ -1,3 +1,4 @@
+
 # C++ 포트폴리오 메뉴얼
 
 #### 작성자: 장현준
@@ -95,8 +96,7 @@
 
     **ReturnObject** 함수는 사용한 객체를 풀에 반환하는 함수, **IsEmpty** 함수는 풀에 비어있는지 알려주는 함수, **GetMaxSize** 함수는 풀의 `max_size` 를 반환하는 함수입니다. 
 
-  ```c++
-T* GetObject() {
+    ```c++T* GetObject() {
   		if (pool.empty())
   		{
   			for (int i = 0; i < max_size; i++)
@@ -119,7 +119,7 @@ T* GetObject() {
   int GetMaxSize(){
       return max_size;
   }
-  ```
+    ```
   
   
 
@@ -127,8 +127,8 @@ T* GetObject() {
 
   몬스터를 실제로 사용하는 것은 아니기 때문에 클래스의 **변수**들은 간략하게 `name`, `hp`, `x`, `y`   만을 사용하여 클래스를 정의하였습니다.
 
-  ```c++
-class Monster
+  ```c++ 
+  class Monster
   {
 	std::string name;
   	double hp;
@@ -139,23 +139,23 @@ class Monster
   
     객체 생성시에 정해진 `name` 은 바뀌지 않기 때문에 생성자에서 멤버 이니셜라이저를 통해 초기화 하도록 **생성자**와 **소멸자**를 정의하였습니다. 나머지 변수들은 객체를 가져올 때마다 **Init** 함수에서 초기화하도록 하였습니다.
   
-  ```c++
-public:
+   ```c++ 
+  public:
   	Monster() : name("Monster") {};
 	Monster(const int& index) : name("Monster " + std::to_string(index)) {}
   	~Monster() {};
-```
+  ```
   
   
   
     **Init** 함수에서는 `random` 라이브러리 에서 제공하는 `random_device` 객체를 사용하여 초기화 하였습니다. 난수 생성을 위해 사용하던 **rand** 함수가 익숙하지만 C언어에서 사용하던 함수이므로, 성능이 개선되고 최적화된 C++ 표준 라이브러리를 대신 사용하였습니다.
   
   ```c++
-#include <string>
+  #include <string>
   #include <stack>
-#include <random>
+  #include <random>
   
-// for generating random value
+  // for generating random value
   std::random_device rd;
   std::mt19937 seed(rd());
   ```
@@ -175,27 +175,27 @@ public:
   
     **Update** 함수에서는 random한 데미지를 나타내는 `randomDamage` 변수에 게임의 프레임당 시간을 나타내는 `elapsed_time` 변수를 곱해 `hp` 를 감소시키도록 하여 일정 시간이 지나면 몬스터 객체가 사망하도록 하였습니다.
   
-  ```c++
-void Update(const double& elapsed_time) {
+    ```c++ 
+    void Update(const double& elapsed_time) {
   		std::uniform_int_distribution<> randomDamage(1, 5);
 		hp -= randomDamage(seed) * elapsed_time;
   	}
-```
+  ```
   
   
   
     **GetName** 함수와 **GetPosition** 함수는 멤버 변수 `name` 과 `x`, `y` 를 반환하는 함수이며, **IsDead** 함수는 몬스터 객체가 사망하였는지 확인하는 함수입니다.
   
-  ```c++
-std::string GetName() { return name; }
-  std::pair<int, int> GetPosition() { return std::make_pair(x, y); }
-bool IsDead() {
+    ```c++ 
+    std::string GetName() { return name; }
+    std::pair<int, int> GetPosition() { return std::make_pair(x, y); }
+  bool IsDead() {
   	if (hp <= 0)
 		return true;
   	else
   		return false;
   	}
-  ```
+    ```
 
 
 
