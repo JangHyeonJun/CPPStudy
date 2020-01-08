@@ -22,7 +22,8 @@
 //void do_something()
 //{
 //	unique_ptr<A> pa(new A());
-//	unique_ptr<A> pb = move(pa); // 복사 생성자가 없지만 move로 대체 가능.
+//	unique_ptr<A> pb = move(pa); // 복사 생성자가 없지만 move로 대체 가능. pa의 소유권이 pb로 이전
+//	// cout << pa->data[0] << endl;  nullptr 에러 발생
 //	cout << pb->data[0] << endl;
 //}
 //
