@@ -38,5 +38,21 @@
 //	std::cout << "값이 30 인 원소를 제거한다." << std::endl;
 //	print_list(list);
 //
+//	list.push_front(120);
+//	std::cout << "값이 120 인 원소를 앞에 추가" << std::endl;
+//	print_list(list);
+//
+//	list.push_back(1);
+//	std::cout << "값이 1인 원소를 뒤에 추가" << std::endl;
+//	print_list(list);
+//
+//	list.sort();
+//	std::cout << "리스트를 오름차순 정렬" << std::endl;
+//	print_list(list);
+//
+//	list.sort(std::greater<int>());
+//	std::cout << "리스트를 내림차순 정렬" << std::endl;
+//	print_list(list);
+//
 //	return 0;
 //}
