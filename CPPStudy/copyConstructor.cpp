@@ -8,7 +8,17 @@
 //public:
 //	PhotonCannon(int x, int y);
 //	PhotonCannon(const PhotonCannon& pc);
+//	PhotonCannon& operator=(const PhotonCannon& other)
+//	{
+//		std::cout << "대입 연산자 호출 !" << std::endl;
+//		hp = other.hp;
+//		shield = other.shield;
+//		coord_x = other.coord_x;
+//		coord_y = other.coord_y;
+//		damage = other.damage;
 //
+//		return *this;
+//	}
 //	void show_status();
 //};
 //PhotonCannon::PhotonCannon(const PhotonCannon& pc)
@@ -35,15 +45,21 @@
 //		<< " ) " << std::endl;
 //	std::cout << " HP : " << hp << std::endl;
 //}
+//
+//
+//
 //int main()
 //{
 //	PhotonCannon pc1(3, 3);
 //	PhotonCannon pc2(pc1);
 //	PhotonCannon pc3 = pc2;
+//	PhotonCannon pc4(1, 1);
+//	pc4 = pc3;
 //
 //	pc1.show_status();
 //	pc2.show_status();
 //	pc3.show_status();
+//	pc4.show_status();
 //
 //	return 0;
 //}
