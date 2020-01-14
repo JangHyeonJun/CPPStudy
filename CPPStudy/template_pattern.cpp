@@ -52,4 +52,7 @@
 //
 //	r1->makeRamen();
 //	r2->makeRamen();
+//
+//	delete r1;
+//	delete r2;
 //}
